@@ -41,5 +41,11 @@
     "js-beautify": "^1.15.1",
     "lodash.escaperegexp": "^4.1.2",
     "object-assign": "^4.1.1"
-  }
+  },
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
 }
