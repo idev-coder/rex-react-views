@@ -11,6 +11,7 @@ var DEFAULT_OPTIONS = {
   babel: {
     presets: [
       '@babel/preset-react',
+      "@babel/preset-flow",
       [
         '@babel/preset-env',
         {
@@ -20,7 +21,7 @@ var DEFAULT_OPTIONS = {
         },
       ],
     ],
-    plugins: ['@babel/preset-flow'],
+
   },
 };
 
@@ -47,7 +48,7 @@ function createEngine(engineOptions) {
       // Passing a RegExp to Babel results in an issue on Windows so we'll just
       // pass the view path.
       require('@babel/register')(
-        assign({only: [].concat(options.settings.views)}, engineOptions.babel)
+        assign({ only: [].concat(options.settings.views) }, engineOptions.babel)
       );
       registered = true;
     }
@@ -65,7 +66,7 @@ function createEngine(engineOptions) {
     } finally {
       if (options.settings.env === 'development') {
         // Remove all files from the module cache that are in the view folder.
-        Object.keys(require.cache).forEach(function(module) {
+        Object.keys(require.cache).forEach(function (module) {
           if (moduleDetectRegEx.test(require.cache[module].filename)) {
             delete require.cache[module];
           }
