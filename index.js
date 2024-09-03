@@ -85,4 +85,4 @@ function createEngine(engineOptions) {
   return renderFile;
 }
 
-exports.__rex = createEngine;
+exports.options = createEngine;
