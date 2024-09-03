@@ -14,10 +14,13 @@ var DEFAULT_OPTIONS = {
       [
         '@babel/preset-env',
         {
-          "runtime": "automatic"
-        }
+          targets: {
+            node: 'current',
+          },
+        },
       ],
-    ]
+    ],
+    plugins: ['@babel/preset-flow'],
   },
 };
 
