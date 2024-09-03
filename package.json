@@ -1,29 +1,17 @@
 {
   "name": "@idev-coder/rex-react-views",
   "version": "1.0.0",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "npm run build:esm && npm run build:cjs && npm run build:types",
-    "build:esm": "tsc --project tsconfig.esm.json",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
-    "build:types": "tsc --project tsconfig.types.json"
-  },
+  "main": "cjs/index.js",
+  "types": "index.d.ts",
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "MIT",
   "description": "",
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/esm/index.js"
-    }
-  },
   "files": [
-    "dist"
+    "index.js",
+    "index.d.ts",
+    "tsconfig.json"
   ],
   "devDependencies": {
     "@types/node": "^22.5.2",
@@ -33,6 +21,7 @@
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
+    "@babel/register": "^7.24.6",
     "js-beautify": "^1.15.1",
     "lodash.escaperegexp": "^4.1.2",
     "object-assign": "^4.1.1",

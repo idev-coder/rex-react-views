@@ -14,13 +14,10 @@ var DEFAULT_OPTIONS = {
       [
         '@babel/preset-env',
         {
-          targets: {
-            node: 'current',
-          },
-        },
+          "runtime": "automatic"
+        }
       ],
-    ],
-    plugins: ['@babel/transform-flow-strip-types'],
+    ]
   },
 };
 
